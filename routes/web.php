@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,12 @@ Route::get('/', function () {
 });
 Route::get('/add-user', [UserController::class, 'insertRecord']);
 Route::get('/get-data/{id}', [UserController::class, 'fetchdata']);
+
+Route::get('/project', function(){
+   return view('project');
+});
+Route::get('/project', [SiteController::class, 'project'])->name('project');
+Route::get('/service', [SiteController::class, 'service'])->name('service');
+Route::get('/projects', [SiteController::class, 'projects_company'])->name('projects_company');
+Route::get('/company', [SiteController::class, 'company'])->name('company');
+Route::get('/contacts', [SiteController::class, 'contact'])->name('contact');
