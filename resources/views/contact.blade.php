@@ -25,8 +25,13 @@
     <div class="card">
       <div class="card-header">
       <h1>Contact Form</h1>
-       <form action="" method="post" enctype="multipart/form-data">
+       <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
          @csrf
+         @if ($message = Session::get('msg'))
+                <div class="alert alert-success">
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif   
          <div class="form-group">
            <label for="name">Name</label>
            <input type="text" name="name" class="form-control">

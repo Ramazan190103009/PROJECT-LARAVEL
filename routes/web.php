@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,5 @@ Route::get('/service', [SiteController::class, 'service'])->name('service');
 Route::get('/projects', [SiteController::class, 'projects_company'])->name('projects_company');
 Route::get('/company', [SiteController::class, 'company'])->name('company');
 Route::get('/contacts', [SiteController::class, 'contact'])->name('contact');
+
+Route::post('/contact', [ClientsController::class, 'store'])->name('store');
