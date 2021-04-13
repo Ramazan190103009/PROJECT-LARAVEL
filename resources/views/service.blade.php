@@ -206,6 +206,94 @@
     border-radius: 10px;
     background-color: #fff;
 }
+.footer {
+       position: relative;
+       top: 100px;
+       height: 220px;
+       color: #fff;
+   }
+   .footer h1{
+       position: relative;
+       left: 3rem;
+       width: 300px;
+       color: #fff;
+   }
+   .footer h5{
+       width: 300px;
+   }
+   .footer p{
+       position: relative;
+       width: 160px;
+   }
+   .row3 {
+       margin-left: 15px;
+   }
+   .contacts {
+       width: 100%;
+   }
+   .column1 {
+     position: absolute;
+     left: 30%;
+     margin-top: 55px;
+   }
+   .social {
+       position: absolute;
+       left: 60%;
+       top: 50px;
+   }
+   .social a{
+       margin-right: 30px;
+       text-decoration: none;
+   }
+   .fa-instagram {
+    padding: 12px;
+	color: #456;
+	background-color: #f1f1f1;
+    border-radius: 10px;
+	cursor: pointer;
+}
+.fa-facebook {
+    padding: 12px;
+	color: #456;
+	background-color: #f1f1f1;
+    border-radius: 10px;
+	cursor: pointer;
+}
+.fa-whatsapp {
+    padding: 12px;
+	color: #456;
+	background-color: #f1f1f1;
+    border-radius: 10px;
+	cursor: pointer;
+}
+.fa-twitter {
+    padding: 12px;
+	color: #456;
+	background-color: #f1f1f1;
+    border-radius: 10px;
+	cursor: pointer;
+}
+.fa-instagram:hover{
+    background-color: rgb(143, 19, 19);
+    color: #fff;
+}
+.fa-facebook:hover{
+    background-color: rgb(19, 62, 143);
+    color: #fff;
+}
+.fa-whatsapp:hover{
+    background-color: rgb(90, 180, 38);
+    color: #fff;
+}
+.fa-twitter:hover{
+    background-color: rgb(133, 162, 255);
+    color: #fff;
+}
+.row4 {
+    position:absolute;
+    left: 57%;
+    top: 150px;
+}
 </style>
     <nav class="navbar navbar-expand bg-dark fixed-top">
       <a href="{{route('project')}}" class="navbar-brand">App-<span style="color: blue;">publisher</span></a>
@@ -265,6 +353,36 @@
        </div>
       </div>
   </div>
-
+  <div class="footer bg-dark">
+       <div class="row contacts">
+           <h1>Контакты</h1>
+           <div class="container telephone">
+           <h5>Телефон</h5>
+           +7 495 100 83 02
+           </div>
+           <div class=" container addres">
+            <h5>Адрес</h5>
+           г. Москва,<br>  ул. Новый Арбат, 27а 
+           </div>
+        <div class="column1">
+           <div class="container addres">
+            <h5>E-mail</h5>
+            go@app-publisher.ru
+           </div>
+           <div class="container addres">
+            <h5>Режим работы</h5>
+            Пн - Пт 10:00-18:00<br>Сб - Вс выходной
+        </div>
+       </div>
+       </div>
+       <div class="social">
+       <a href="https://instagram.com" id="icon" class="fa fa-instagram" style="font-size: 30px;"></a>
+        <a href="https://facebook.com" id="icon" class="fa fa-facebook" style="font-size: 30px;"></a>
+        <a href="https://whatsapp.com" id="icon" class="fa fa-whatsapp" style="font-size: 30px;"></a>
+        <a href="https://twitter.com" id="icon" class="fa fa-twitter" style="font-size: 30px;"></a>
+       </div>
+       <div class="row row4">APP-publisher, © 2021
+       Политика конфиденциальности</div>
+   </div>
 </body>
 </html>    
