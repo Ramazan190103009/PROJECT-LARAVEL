@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*

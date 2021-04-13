@@ -17,12 +17,12 @@
     }
   .navbar-brand {
       margin-left: 70px;
-      color: #000;
+      color: #fff;
       font-weight: bold;
       font-size: 30px;
   }
   .navbar-brand:hover {
-      color: #000;
+      color: #fff;
   }
   .navlink {
       position: relative;
@@ -30,7 +30,7 @@
     margin-right: 15px;
      color: #fff;
      font-size: 20px;
-     font-family: serif;
+     font-family:Arial, Helvetica, sans-serif;
   }
   .navlink:hover {
       color: blue;

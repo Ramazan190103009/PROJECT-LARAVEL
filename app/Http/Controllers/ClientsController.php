@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMail;
 use App\Models\Clients;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ClientsController extends Controller
 {
@@ -14,6 +16,13 @@ class ClientsController extends Controller
           'phone'=>$request->phone,
           'file'=>$request->file 
        ]);
+        $details = [
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'file'=>$request->file
+        ];
+        Mail::to('yertayevrk@gmail.com')->send(new SendMail($details));
        return back()->with('msg', 'Your application has been sent successfully!');
       return $request->file('file')->store('public/uploads'); 
     }
