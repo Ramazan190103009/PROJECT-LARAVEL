@@ -38,11 +38,11 @@
   }
    #btn-form1{
        position: relative;
-       margin-left:7rem;   
+       left: 20rem;   
    }
-   #lang {
+   #lang{
        position: relative;
-       margin-left: 7rem;
+       left: 255%;
    }
    .heading1{
        margin-top: 120px;
@@ -88,12 +88,16 @@
        <li class="nav-item"><a href="{{route('service')}}" target="_blank" class="nav-link navlink">Услуги</a></li>
        <li class="nav-item"><a href="{{route('projects_company')}}" target="_blank" class="nav-link navlink">Проекты</a></li>
        <li class="nav-item"><a href="{{route('company')}}" target="_blank" class="nav-link navlink">Компания</a></li>
-       <li class="nav-item"><a href="{{route('contact')}}" target="_blank" class="nav-link navlink">Контакты</a></li>
       </ul>
-      <a href="" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
+      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
       <div class="nav-item dropdown">
   <a class="btn btn-success dropdown-toggle" id="lang" type="button" data-toggle="dropdown">Choose lang
   </a>
+  <style>
+      .dropdown-menu{
+       margin-left: 320px;   
+      }
+  </style>
   <ul class="dropdown-menu" id="list">
     <li><a class="dropdown-item" href="lang/en">EN</a></li>
     <li><a class="dropdown-item" href="lang/ru">RU</a></li>
