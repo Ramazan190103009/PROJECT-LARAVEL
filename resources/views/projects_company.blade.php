@@ -179,18 +179,18 @@
 }
 .row4 {
     position:absolute;
-    left: 57%;
+    left: 60%;
     top: 150px;
 }
 </style>
 <nav class="navbar navbar-expand bg-dark fixed-top">
       <a href="{{route('project')}}" class="navbar-brand">App-<span style="color: blue;">publisher</span></a>
       <ul class="navbar-nav">
-       <li class="nav-item"><a href="{{route('service')}}" class="nav-link navlink">Услуги</a></li>
-       <li class="nav-item"><a href="{{route('projects_company')}}" class="nav-link navlink">Проекты</a></li>
-       <li class="nav-item"><a href="{{route('company')}}" class="nav-link navlink">Компания</a></li>
+       <li class="nav-item"><a href="{{route('service')}}" class="nav-link navlink">{{__('text.service')}}</a></li>
+       <li class="nav-item"><a href="{{route('projects_company')}}" class="nav-link navlink">{{__('text.projects')}}</a></li>
+       <li class="nav-item"><a href="{{route('company')}}" class="nav-link navlink">{{__('text.company')}}</a></li>
       </ul>
-      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
+      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">{{__('text.application')}}</a>
       <div class="nav-item dropdown">
   <a class="btn btn-success dropdown-toggle" id="lang" type="button" data-toggle="dropdown">Choose lang
   </a>
@@ -207,8 +207,8 @@
 </div>
 </nav> 
    <div class="container">
-       <h1 class="display-4">Игры и приложения</h1>
-       <p>которые мы продвигали, издавали или разработали</p>
+       <h1 class="display-4">{{__('text.des3')}}</h1>
+       <p>{{__('text.des4')}}</p>
 
 <div id="demo" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
@@ -257,22 +257,22 @@
 </div>
 <div class="footer bg-dark">
        <div class="row contacts">
-           <h1>Контакты</h1>
+           <h1>{{__('text.contacts')}}</h1>
            <div class="container telephone">
-           <h5>Телефон</h5>
+           <h5>{{__('text.phone')}}</h5>
            +7 495 100 83 02
            </div>
            <div class=" container addres">
-            <h5>Адрес</h5>
-           г. Москва,<br>  ул. Новый Арбат, 27а 
+            <h5>{{__('text.address')}}</h5>
+           {{__('text.address-des1')}}<br>{{__('text.address-des2')}} 
            </div>
         <div class="column1">
-           <div class="container addres">
-            <h5>E-mail</h5>
+           <div class="container address">
+            <h5>{{__('text.email')}}</h5>
             go@app-publisher.ru
            </div>
            <div class="container addres">
-            <h5>Режим работы</h5>
+            <h5>{{__('text.schedule')}}</h5>
             Пн - Пт 10:00-18:00<br>Сб - Вс выходной
         </div>
        </div>
@@ -284,7 +284,7 @@
         <a href="https://twitter.com" id="icon" class="fa fa-twitter" style="font-size: 30px;"></a>
        </div>
        <div class="row row4">APP-publisher, © 2021
-       Политика конфиденциальности</div>
+       {{__('text.privacy')}}</div>
    </div>
 </body>
 </html>

@@ -297,11 +297,11 @@
     <nav class="navbar navbar-expand bg-dark fixed-top">
       <a href="{{route('project')}}" class="navbar-brand">App-<span style="color: blue;">publisher</span></a>
       <ul class="navbar-nav">
-       <li class="nav-item"><a href="{{route('service')}}" class="nav-link navlink">Услуги</a></li>
-       <li class="nav-item"><a href="{{route('projects_company')}}" class="nav-link navlink">Проекты</a></li>
-       <li class="nav-item"><a href="{{route('company')}}" class="nav-link navlink">Компания</a></li>
+       <li class="nav-item"><a href="{{route('service')}}" class="nav-link navlink">{{__('text.service')}}</a></li>
+       <li class="nav-item"><a href="{{route('projects_company')}}" class="nav-link navlink">{{__('text.projects')}}</a></li>
+       <li class="nav-item"><a href="{{route('company')}}" class="nav-link navlink">{{__('text.company')}}</a></li>
       </ul>
-      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
+      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">{{__('text.application')}}</a>
       <div class="nav-item dropdown">
   <a class="btn btn-success dropdown-toggle" id="lang" type="button" data-toggle="dropdown">Choose lang
   </a>
@@ -318,22 +318,22 @@
 </div>
 </nav>
   <div class="container">
-  <h4 class="display-4">Как мы работаем?</h4>
+  <h4 class="display-4">{{__('text.des5')}}</h4>
        <div class="row">
          <div class="column">
          <div class="box3-3">
           <div id="circle14"></div>
           <div id="circle15"></div> 
         </div>
-         <h3>Аудит</h3>
-         <p>Анализируем вашу игру или приложение:<br>  тематику, конкурентов,  UI/UX дизайн,<br> показатели  CPI, Retention и принимаем<br> решение о продвижении</p>
+         <h3>{{__('text.des6')}}</h3>
+         <p>{{__('text.des7')}}<br>{{__('text.des7.5')}}<br>{{__('text.des7.6')}}</p>
        </div>
          <div class="column">
         <div class="box4-4">
           <div id="circle16"></div>
         </div>
-         <h3>Трафик и установки</h3>
-         <p>Делаем предложение в формате<br> взаимовыгодного сотрудничества - вы<br> получаете установки и пользователей своей<br> игры или приложения.</p>
+         <h3>{{__('text.des8')}}</h3>
+         <p>{{__('text.des9')}}<br>{{__('text.des9.5')}}<br>{{__('text.des9.6')}}</p>
        </div>
         <div class="column">
         <div class="box5-5">
@@ -342,8 +342,8 @@
           <div id="circle19"></div>
           <div id="circle20"></div>
         </div>
-         <h3>Поддержка</h3>
-         <p>Индивидуальная работа с каждой командой<br> или разработчиком, которые получают<br> маркетинговую поддержку (в том числе — и<br> экспертную), доступ к аналитике и сервисам.</p>
+         <h3>{{__('text.des10')}}</h3>
+         <p>{{__('text.des11')}}<br>{{__('text.des11.5')}}<br>{{__('text.des11.6')}}</p>
        </div>
         <div class="column">
         <div class="box6-6">
@@ -351,8 +351,8 @@
           <div id="circle22"></div>
           <div id="circle23"></div>
         </div>
-         <h3>Экспертиза</h3>
-         <p>Услуги по ASO оптимизации любых <br>приложений, аудиты текущего состояния<br> продукта, маркетинговые тесты и обеспечиваем<br> трафик игры или приложения.</p>
+         <h3>{{__('text.des12')}}</h3>
+         <p>{{__('text.des13')}}<br>{{__('text.des13.5')}}<br>{{__('text.des13.6')}}</p>
        </div>
       </div>
   </div>

@@ -86,11 +86,11 @@
     <nav class="navbar navbar-expand bg-dark fixed-top">
       <a href="{{route('project')}}" class="navbar-brand">App-<span style="color: blue;">publisher</span></a>
       <ul class="navbar-nav">
-       <li class="nav-item"><a href="{{route('service')}}" target="_blank" class="nav-link navlink">Услуги</a></li>
-       <li class="nav-item"><a href="{{route('projects_company')}}" target="_blank" class="nav-link navlink">Проекты</a></li>
-       <li class="nav-item"><a href="{{route('company')}}" target="_blank" class="nav-link navlink">Компания</a></li>
+       <li class="nav-item"><a href="{{route('service')}}" target="_blank" class="nav-link navlink">{{__('text.service')}}</a></li>
+       <li class="nav-item"><a href="{{route('projects_company')}}" target="_blank" class="nav-link navlink">{{__('text.projects')}}</a></li>
+       <li class="nav-item"><a href="{{route('company')}}" target="_blank" class="nav-link navlink">{{__('text.company')}}</a></li>
       </ul>
-      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
+      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">{{__('text.application')}}</a>
       <div class="nav-item dropdown">
   <a class="btn btn-success dropdown-toggle" id="lang" type="button" data-toggle="dropdown">Choose lang
   </a>
@@ -110,9 +110,9 @@
      <svg class="svg1" height="220" width="100">
         <ellipse cx="-10" cy="150" rx="50" ry="40" style="fill:#5360FE;"/>
       </svg>
-    <h4 class="display-3 heading1">Продвигаем и издаём <br> игры и приложения</h4>
-    <p class="des1">Тщательно анализируем результаты, грамотно поддерживаем <br>в развитии и монетизизации вашего продукта</p>
-    <button class="btn btn-cost" id="btn_cost">Узнать стоимость</a></button>
+    <h1 class=" heading1">{{__('text.des1')}}<br>{{__('text.des1.5')}}</h1>
+    <p class="des1">{{__('text.des2')}}<br>{{__('text.des2.5')}}</p>
+    <button class="btn btn-cost" id="btn_cost">{{__('text.cost')}}</a></button>
 <style>
   .btn-cost:hover {
       background-color: green;
@@ -204,13 +204,7 @@
 </script>
 <div class="modal" id="modal4" style="display: none;">
                 <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
-                  <h1>Узнать стоимость</h1>
-                  @csrf
-         @if ($message = Session::get('msg'))
-                <div class="alert alert-success">
-                    <strong>{{ $message }}</strong>
-                </div>
-            @endif  
+                  <h1>{{__('text.cost')}}</h1>
                   <span class="close" onclick="document.getElementById('modal4').style.display='none'">&times;</span>
                   <input class="form-control" type="text" id="name" name="name" placeholder="Имя"><br>
                   <input class="form-control" type="text" id="number" name="phone" id="number" placeholder="Телефон"><br>

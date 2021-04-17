@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
@@ -34,3 +35,9 @@ Route::get('/company', [SiteController::class, 'company'])->name('company');
 Route::get('/contacts', [SiteController::class, 'contact'])->name('contact');
 
 Route::post('/contact', [ClientsController::class, 'store'])->name('store');
+
+//localization with switches
+Route::get('lang/{lang}', function($locale){
+    session()->put('locale', $locale);
+    return Redirect()->back();
+});
