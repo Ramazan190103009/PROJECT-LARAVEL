@@ -301,7 +301,7 @@
        <li class="nav-item"><a href="{{route('projects_company')}}" class="nav-link navlink">Проекты</a></li>
        <li class="nav-item"><a href="{{route('company')}}" class="nav-link navlink">Компания</a></li>
       </ul>
-      <a href="" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
+      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
       <div class="nav-item dropdown">
   <a class="btn btn-success dropdown-toggle" id="lang" type="button" data-toggle="dropdown">Choose lang
   </a>

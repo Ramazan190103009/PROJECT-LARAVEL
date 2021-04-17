@@ -35,13 +35,13 @@
       color: blue;
       font-weight: bold;
   }
-   #btn-form1{
+  #btn-form1{
        position: relative;
-       left: 18rem;   
+       left:20rem;   
    }
    #lang {
        position: relative;
-       margin-left: 19rem;
+       left: 21rem;
    }
    .display-4{
        margin-top: 90px;
@@ -183,14 +183,14 @@
     top: 150px;
 }
 </style>
-    <nav class="navbar navbar-expand bg-dark fixed-top">
+<nav class="navbar navbar-expand bg-dark fixed-top">
       <a href="{{route('project')}}" class="navbar-brand">App-<span style="color: blue;">publisher</span></a>
       <ul class="navbar-nav">
-       <li class="nav-item"><a href="{{route('service')}}" target="_blank" class="nav-link navlink">Услуги</a></li>
+       <li class="nav-item"><a href="{{route('service')}}" class="nav-link navlink">Услуги</a></li>
        <li class="nav-item"><a href="{{route('projects_company')}}" class="nav-link navlink">Проекты</a></li>
        <li class="nav-item"><a href="{{route('company')}}" class="nav-link navlink">Компания</a></li>
       </ul>
-      <a href="" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
+      <a href="{{route('contact')}}" class="btn btn-primary" id="btn-form1">Оставить заявку</a>
       <div class="nav-item dropdown">
   <a class="btn btn-success dropdown-toggle" id="lang" type="button" data-toggle="dropdown">Choose lang
   </a>
@@ -205,7 +205,7 @@
     <li><a class="dropdown-item" href="lang/kz">KZ</a></li>
   </ul>
 </div>
-    </nav>  
+</nav> 
    <div class="container">
        <h1 class="display-4">Игры и приложения</h1>
        <p>которые мы продвигали, издавали или разработали</p>

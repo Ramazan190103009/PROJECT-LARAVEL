@@ -61,6 +61,7 @@
        border-radius: 50px;
        color: #fff;
        font-size: 20px;
+       background-color: #5360FE;
        box-shadow: 5px 10px #000;
    }
    .img-phone{
@@ -111,8 +112,113 @@
       </svg>
     <h4 class="display-3 heading1">Продвигаем и издаём <br> игры и приложения</h4>
     <p class="des1">Тщательно анализируем результаты, грамотно поддерживаем <br>в развитии и монетизизации вашего продукта</p>
-    <button class="btn btn-cost" style="background-color: #5360FE;">Узнать стоимость</button><a href="">
+    <button class="btn btn-cost" id="btn_cost">Узнать стоимость</a></button>
+<style>
+  .btn-cost:hover {
+      background-color: green;
+      box-shadow: 5px 10px #f1f1f1;
+      color: #fff;
+  }
+  #modal4 form{
+    position: relative;
+    left: 25%;
+    top: 70px;
+    width: 600px;
+    height: 450px;
+    border-radius: 30px;
+    background-color: #5360FE;
+}
+#modal4 .close{
+    position: relative;
+    left: 20%;
+    top: -60px;
+    color: red;
+    border: none;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#modal4 input {
+    position: relative;
+    left: 10%;
+}
+#modal4 input[type=text]{
+    width: 37%;
+    height: 50px;
+    border-radius: 50px;
+}
+#modal4 #name{
+    position: relative;
+    top: 100px;
+}
+#modal4 #number {
+    position: relative;
+    top: 27px;
+    margin-left: 40%;
+}
+#modal4 input[type=email]{
+    position: relative;
+    top: 30px;
+    width: 77%;
+    height: 50px;
+    border-radius: 50px;
+}
+#modal4 input[type=file]{
+    position: relative;
+    width: 77%;
+    top: 30px;
+    height: 50px;
+    border-radius: 50px;
+}
+#modal4 h1{
+    position: absolute;
+    left: 19%;
+    top: 20px;
+    color: #fff;
+}
+#modal4 #submit {
+    position: absolute;
+    left: 27%;
+    top: 350px; 
+    width: 40%;
 
+}
+#modal4 {
+    width: 100%;
+    height: 100%;
+    border-color: rgb(0, 0, 0, 0.9);
+}
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+</style>
+<script>
+      $("#btn_cost").click(function() {
+       $("#modal4").show(1000);
+     });
+     $(document).ready(function(){
+      $('#header1').fadeIn(2000);
+    });
+</script>
+<div class="modal" id="modal4" style="display: none;">
+                <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
+                  <h1>Узнать стоимость</h1>
+                  @csrf
+         @if ($message = Session::get('msg'))
+                <div class="alert alert-success">
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif  
+                  <span class="close" onclick="document.getElementById('modal4').style.display='none'">&times;</span>
+                  <input class="form-control" type="text" id="name" name="name" placeholder="Имя"><br>
+                  <input class="form-control" type="text" id="number" name="phone" id="number" placeholder="Телефон"><br>
+                  <input class="form-control" type="email" id="email" name="email" placeholder="E-mail"><br>
+                  <input type="file" name="file" id="file" class="form-control">
+                  <input class="form-control btn btn-success" id="submit" type="submit" id="submit" value="Отправить">
+                </form>
+</div>
         <div class="img">
         <img src="{{asset('images/Vectary.png')}}" alt="vectary" class="img-rounded img-vectary">
         <img src="{{asset('images/phone.png')}}" alt="phone" class="img-rounded img-phone">
